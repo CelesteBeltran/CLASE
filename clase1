@@ -1,0 +1,49 @@
+const express = require('express');
+const bodyParser = require('body-parser')
+const router = express.Router();
+
+
+var app = express(); 
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(router)
+
+router.get('/', function(req,res){
+    res.send('ola ke ase en GET o ke ase')
+});
+
+router.post('/', function(req,res){
+    res.send('ola ke ase en POST o ke ase')
+});
+
+router.put('/', function(req,res){
+    res.send('ola ke ase en PUT o ke ase')
+});
+
+router.patch('/', function(req,res){
+    res.send('ola ke ase en PATCH o ke ase')
+});
+
+router.delete('/', function(req,res){
+    res.send('ola ke ase en DELETE o ke ase')
+});
+
+router.options('/', function(req,res){
+    res.send('ola ke ase en OPTIONS o ke ase')
+});
+
+router.post('/', function(req,res){
+    res.send('Hola desde POST')
+});
+
+
+
+router.get('/user', function(req,res){
+    var suma = req.body.sumando1 + req.body.sumando2
+    var saludo = 'Su nombre es: ' + re
+
+})
+
+app.listen(3001);
+console.log('Estoy escuchando por: http://localhost:3001');
