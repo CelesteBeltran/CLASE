@@ -1,0 +1,33 @@
+const express = require('express');
+const bodyParser = require('body-parser')
+const router = express.Router();
+
+
+var app = express(); 
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(router)
+
+
+
+router.get('/user', function(req,res){
+    var suma = req.body.sumando1 + req.body.sumando2
+    var saludo = 'Su nombre es: ' + re
+
+});
+
+router.put('/user', function(req,res){
+    res.send('Crear usuario')
+});
+
+router.delete('/user', function(req,res){
+    res.send('Borrar usuario')
+});
+
+router.patch('/user', function(req,res){
+    res.send('Modificar Usuario')
+});
+
+app.listen(3002);
+console.log('Estoy escuchando por: http://localhost:3002');
